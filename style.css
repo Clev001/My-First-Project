@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "inter", sans-serif;
+    text-decoration: none;
+
+}
+body{
+    margin: 0 10%;
+    height: auto;
+    background-color: var();
+
+}
+:root{
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    
+
+}
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* background-color: aqua; */
+    height: 60px;
+    margin-top: 1rem;
+
+}
+ul{
+    width: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+}
+
+a,p{
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+}
+ 
+a:hover{
+    color: var(--soft-orange);
+}
+.logo{
+    display: block;
+    width: 400px;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.hero{
+    width: 68%;
+}
+.new{
+    width: 30%; 
+    background-color: antiquewhite;
+}
+.hero img{
+    width: 100%;
+}
+
+.hero img:nth-of-type(2){
+    display: none;
+}
+.hero-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.bright{
+    width: 50%;
+    
+
+}
+.bright h1{
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--very-dark-blue);
+}
+.read-more{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+
+.read-more p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+button{
+    width: 50%;
+     background-color: var(--soft-red);
+     /* outline: none; */
+     color: var(--off-white);
+     padding: 14px;
+     border: none;
+     letter-spacing: 3px;
+
+}
+
+button:hover{
+    background-color: var(--very-dark-blue);
+    /* color: var(--off-white); */
+    cursor: pointer;
+}
+/* news card */
+.new{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--very-dark-blue);
+}
+.new-text{
+    width: 90%;
+}
+.new-text p{
+    font-size: 0.97rem;
+}
+.new h1{
+    align-self: flex-start;
+margin-left: 5%;
+    color: var(--soft-orange);
+}
+.new-text>h3{
+    color: var(--off-white);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+.new-text>h3:hover{
+    color: var(--soft-orange);
+}
+/* line */
+hr{
+    width: 90%;
+    border: 1px solid var(--dark-grayish-blue);
+}
+/* footer section */
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+.footer-card{
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+}
+.footer-card img{
+    width: 30%;
+    
+}
+.footer-card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+}
+.footer-card-text h1{
+    color: var(--grayish-blue);
+}
+.footer-card-text h3{
+    color: var(--very-dark-blue);
+    font-size: 0.8rem;
+    font-weight: 800;
+
+}
+.footer-card-text:hover h3{
+color: var(--soft-orange);
+
+}
+.footer-card-text p{
+    font-size: 0.76rem;
+    font-weight: 500;
+
+}
+
+.menu{
+    display: none;
+}
+/* media query */
+
+@media (max-width: 778px){
+    p{
+        font-size: 1rem;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .hero img:nth-of-type(1){
+        display: none;
+    }
+    .hero img:nth-of-type(2){
+        display: block;
+    }
+    .hero,.new,.bright,.read-more{
+        width: 100%;
+    }
+    .main,.hero-content,.footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .new{
+        height: 500px;
+        margin-top: 1.5rem;
+    }
+    .new p{
+        font-size: 1rem;
+
+    }
+    .footer-card{
+        width: 100%;
+    }
+    button{
+    margin-top: 1rem;
+    
+
+}
